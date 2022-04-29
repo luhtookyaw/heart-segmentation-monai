@@ -53,12 +53,12 @@ def train(model, data_in, loss, optim, max_epochs, model_dir, test_interval=1 , 
 
     for epoch in range(max_epochs):
         print("-" * 10)
-        print(f"epoch {epoch + 1}/{max_epochs}")
+        # print(f"epoch {epoch + 1}/{max_epochs}")
         model.train()
         train_epoch_loss = 0
         train_step = 0
         epoch_metric_train = 0
-        for batch_data in train_loader:
+        for batch_data in tqdm(train_loader, desc=f"Epoch {epoch + 1}/{max_epochs}"):
             
             train_step += 1
 
@@ -76,13 +76,13 @@ def train(model, data_in, loss, optim, max_epochs, model_dir, test_interval=1 , 
             optim.step()
 
             train_epoch_loss += train_loss.item()
-            print(
-                f"{train_step}/{len(train_loader) // train_loader.batch_size}, "
-                f"Train_loss: {train_loss.item():.4f}")
+            # print(
+            #     f"{train_step}/{len(train_loader) // train_loader.batch_size}, "
+            #     f"Train_loss: {train_loss.item():.4f}")
 
             train_metric = dice_metric(outputs, label)
             epoch_metric_train += train_metric
-            print(f'Train_dice: {train_metric:.4f}')
+            # print(f'Train_dice: {train_metric:.4f}')
 
         print('-'*20)
         
