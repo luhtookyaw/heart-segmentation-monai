@@ -17,7 +17,7 @@ from monai.data import DataLoader, Dataset, CacheDataset
 from monai.utils import set_determinism, first
 from monai.losses import DiceLoss
 from glob import glob
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 
 
 def dice_metric(predicted, target):
@@ -52,8 +52,9 @@ def train(model, data_in, loss, optim, max_epochs, model_dir, test_interval=1 , 
     train_loader, test_loader = data_in
 
     for epoch in range(max_epochs):
-        print("-" * 10)
-        # print(f"epoch {epoch + 1}/{max_epochs}")
+        print("-" * 100)
+
+        # train the model
         model.train()
         train_epoch_loss = 0
         train_step = 0
@@ -76,15 +77,11 @@ def train(model, data_in, loss, optim, max_epochs, model_dir, test_interval=1 , 
             optim.step()
 
             train_epoch_loss += train_loss.item()
-            # print(
-            #     f"{train_step}/{len(train_loader) // train_loader.batch_size}, "
-            #     f"Train_loss: {train_loss.item():.4f}")
 
             train_metric = dice_metric(outputs, label)
             epoch_metric_train += train_metric
-            # print(f'Train_dice: {train_metric:.4f}')
 
-        print('-'*20)
+        print('-'*100)
         
         train_epoch_loss /= train_step
         print(f'Epoch_loss: {train_epoch_loss:.4f}')
