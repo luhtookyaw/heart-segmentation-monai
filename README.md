@@ -1,5 +1,9 @@
 ## Heart Segmentation with MONAI
 
+<div>
+    <img src="./heart_segmentation.png" alt="Heart Segmentation Image"/>
+</div>
+
 <h3>Train and Test in Colab<h3>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/luhtookyaw/heart-segmentation-monai/blob/main/Training_and_Testing.ipynb)
