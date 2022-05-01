@@ -1,6 +1,11 @@
 # 3D Heart Segmentation with MONAI
 
-## Resulting predictions of training 600 epochs on 15 samples, each with 64 slices
+## Resulting predictions of training 700 epochs on 15 samples, each with 64 slices
+
+<div>
+    <img src="./heart_segmentation_0.png" alt="Heart Segmentation Image Zero"/>
+</div>
+
 <div>
     <img src="./heart_segmentation_1.png" alt="Heart Segmentation Image One"/>
 </div>
