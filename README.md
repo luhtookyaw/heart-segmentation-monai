@@ -3,15 +3,15 @@
 ## Resulting predictions of training 700 epochs on 15 samples, each with 64 slices
 
 <div>
-    <img src="./heart_segmentation_0.png" alt="Heart Segmentation Image Zero"/>
+    <img src="./images/heart_segmentation_0.png" alt="Heart Segmentation Image Zero"/>
 </div>
 
 <div>
-    <img src="./heart_segmentation_1.png" alt="Heart Segmentation Image One"/>
+    <img src="./images/heart_segmentation_1.png" alt="Heart Segmentation Image One"/>
 </div>
 
 <div>
-    <img src="./heart_segmentation_2.png" alt="Heart Segmentation Image Two"/>
+    <img src="./images/heart_segmentation_2.png" alt="Heart Segmentation Image Two"/>
 </div>
 
 <h3>Train and Test in Colab<h3>
